@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvjquq3gig8vm"]
+
+[ext_resource type="PackedScene" uid="uid://dtj3t1ig33xhg" path="res://Scenes/game_area.tscn" id="1_vfee0"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="GameBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.331
+anchor_right = 0.664
+anchor_bottom = 1.0
+offset_left = -0.312042
+offset_right = 0.0719604
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="GameArea" parent="." instance=ExtResource("1_vfee0")]
+position = Vector2(575, 0)
