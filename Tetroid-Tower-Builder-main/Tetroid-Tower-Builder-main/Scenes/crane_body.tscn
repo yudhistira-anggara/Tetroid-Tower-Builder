@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6rbiyk72ydsd"]
+
+[ext_resource type="Texture2D" uid="uid://bceoov4yjy2u4" path="res://Assets/crane_body.jpg" id="1_rmy7g"]
+[ext_resource type="Script" path="res://Scripts/crane_body.gd" id="1_xgiwh"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_mlyry"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voiyn"]
+
+[node name="CraneBody" type="CharacterBody2D"]
+script = ExtResource("1_xgiwh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+texture_filter = 1
+mesh = SubResource("QuadMesh_mlyry")
+texture = ExtResource("1_rmy7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_voiyn")
